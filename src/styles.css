@@ -1,0 +1,41 @@
+@layer theme, base, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@theme {
+  --color-*: initial;
+  /* Catppuccin Frappé colors */
+  --color-base: #303446;
+  --color-mauve: #cba6f7;
+  --color-text: #c6d0f5;
+  --color-subtext-1: #b5bfe2;
+  --color-subtext-0: #a6adc8;
+  --color-pink: #f4b8e4;
+  --color-lavender: #7287fd;
+  --color-blue: #8caaee;
+  --color-blue-dark: #7298e3;
+  --color-flamingo: #f2cdcd; 
+  --color-overlay-0: #737994;
+  --color-green: #a6d189;
+  --color-sapphire: #7dc4e4;
+}
+
+@layer base {
+  * {
+    font-family: "JetBrains Mono", monospace;
+  }
+}
+
+@layer components {
+  .link {
+    @apply block bg-blue font-semibold rounded-xl hover:bg-blue-dark !text-base text-center py-3 px-4 active:!scale-95 transition duration-100 no-underline;
+  }
+
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+}
+
